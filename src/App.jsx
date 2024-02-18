@@ -5,21 +5,13 @@ import DetailsCard from "./components/DetailsCard";
 import PricingAndShippingCard from "./components/PricingAndShippingCard";
 
 import data from "../resources/data/data.json";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div className="app">
       <HeaderBar />
-      <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        <DetailsCard data={data} />
-        <DetailsCard data={data}/>
-      </div>
-
-      <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        <PricingAndShippingCard data={data} />
-        <PricingAndShippingCard data={data}/>
-      </div>
-      
+      <Footer description={data.article.description_long} data={data} />
     </div>
   );
 };

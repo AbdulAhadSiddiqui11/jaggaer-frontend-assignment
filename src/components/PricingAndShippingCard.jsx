@@ -52,7 +52,7 @@ const PricingAndShippingCard = ({ data }) => {
   };
 
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" style={{height: '420px'}}>
           <CardContent style={{ borderBottom: "1px solid #ccc" }}>
           <Typography
           component="div"
