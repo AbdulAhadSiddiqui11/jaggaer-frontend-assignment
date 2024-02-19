@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Grid } from "@mui/material";
+import React, { useState, useContext } from "react";
+import { Grid, Badge } from "@mui/material"; // Import Badge component from MUI
 
 import sampleData from "../../resources/data/data.json";
 
@@ -8,9 +8,11 @@ import unlike from "../../resources/icons/favorite.svg";
 import factsoft from "../../resources/icons/facts-soft.svg";
 import cart from "../../resources/icons/cart.svg";
 
+import { CartContext } from "../App";
+
 const HeaderBar = () => {
   const [liked, setLiked] = useState(false);
-
+  const { cartItems } = useContext(CartContext);
 
   return (
     <div className="top-header">
@@ -30,9 +32,11 @@ const HeaderBar = () => {
           <img src={factsoft} alt="" className="header-icon" />
         </Grid>
       </Grid>
-      <div id="cart-icon">
-        <img src={cart} alt="" className="header-icon" />
-      </div>
+      <Badge badgeContent={cartItems} color="error">
+        <div id="cart-icon">
+          <img src={cart} alt="" className="header-icon" />
+        </div>
+      </Badge>
     </div>
   );
 };

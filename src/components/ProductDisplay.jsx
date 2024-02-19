@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import {
   Grid,
-  Card,
-  CardMedia,
   Dialog,
   DialogContent,
   DialogContentText,
@@ -39,7 +37,7 @@ const ProductDisplay = () => {
           item
           xs={12}
           sm={12}
-          md={1.2}
+          md={3}
           style={{
             display: "flex",
             justifyContent: "center",
@@ -88,8 +86,9 @@ const ProductDisplay = () => {
         <Grid
           item
           xs={12}
-          md={3}
-          lg={4}
+          sm={12}
+          md={6}
+          lg={8}
           style={{
             display: "flex",
             justifyContent: "center",

@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "./", // Set publicPath to "./" for relative paths
   },
   devServer: {
     static: {
@@ -28,8 +28,12 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: "asset/resource", // Use asset/resource for image files
+      },
+      {
         test: /\.svg$/,
-        use: ["file-loader"],
+        type: "asset/resource", // Use asset/resource for SVG files
       },
     ],
   },
