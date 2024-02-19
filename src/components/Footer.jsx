@@ -5,7 +5,7 @@ import PricingAndShippingCard from "./PricingAndShippingCard";
 
 const Footer = ({ description, data }) => {
   return (
-    <div style={{ backgroundColor: "#efefef", paddingBottom: '20px', paddingLeft: '10px'}}>
+    <div style={{ backgroundColor: "#efefef", paddingBottom: '20px', paddingLeft: '10px', paddingRight: '10px'}}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={10}>
           <Typography
